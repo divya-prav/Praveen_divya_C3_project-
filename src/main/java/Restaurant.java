@@ -13,6 +13,7 @@ public class Restaurant {
     public LocalTimeUtils localTimeUtils;
     private List<Item> menu = new ArrayList<Item>();
 
+    private Item item;
 
     public Restaurant(String name, String location, LocalTime openingTime, LocalTime closingTime) {
         this.name = name;
@@ -79,5 +80,6 @@ public class Restaurant {
     public String getName() {
         return name;
     }
+
 
 }
