@@ -68,6 +68,20 @@ public class Restaurant {
 
         menu.remove(itemToBeRemoved);
     }
+    public int orderTotalCost(List<String> items) {
+
+        int totalCost=0;
+        for(int i=0;i< items.size();i++){
+
+            for(Item menuItem: menu) {
+                if(menuItem.getName().equals(items.get(i))) {
+                    totalCost+=menuItem.getPrice();
+                }
+            }
+
+        }
+        return totalCost;
+    }
     public void displayDetails(){
         System.out.println("Restaurant:"+ name + "\n"
                 +"Location:"+ location + "\n"
